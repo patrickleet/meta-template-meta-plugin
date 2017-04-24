@@ -5,12 +5,12 @@ let loaded = false;
 if (loaded) return process.kill();
 
 const program = require('commander');
-const debug = require('debug')('meta-docker');
+const debug = require('debug')('meta-{[PLUGIN_NAME]}');
 
 program
   // .command('checkout', 'checkout a common branch across all repositories')
   // .command('clone', 'clone meta and child repositories')
-  // .command('status', 'docker status of meta and child repositories')
+  // .command('status', '{[PLUGIN_NAME]} status of meta and child repositories')
   .parse(process.argv);
 
 loaded = true;
